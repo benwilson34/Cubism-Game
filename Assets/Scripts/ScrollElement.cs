@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class ScrollElement : MonoBehaviour {
 
-	// Use this for initialization
+    float _origYrotation;
+
 	void Start () {
-		
+        _origYrotation = transform.rotation.y;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public void SetNewRotation(float y) {
+        var rot = transform.rotation;
+        rot.y = _origYrotation + y;
+        transform.rotation = rot;
+    }
 }
