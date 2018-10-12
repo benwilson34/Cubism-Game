@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class ScrollElement : MonoBehaviour {
 
-    float _origYrotation;
+    public bool Interactable { get { return _interactable; } set { _interactable = value; } }
+    private bool _interactable = true;
 
-	void Start () {
-        _origYrotation = transform.rotation.y;
-	}
+    public float RotationY {
+        get {
+            return transform.rotation.eulerAngles.y;
+        }
 
-    public void SetNewRotation(float y) {
-        var rot = transform.rotation;
-        rot.y = _origYrotation + y;
-        transform.rotation = rot;
+        set {
+            var rot = transform.rotation.eulerAngles;
+            rot.y = value;
+            transform.rotation = Quaternion.Euler(rot);
+        }
+    }
+
+    private float _origYrotation;
+
+    //public void SetRandomRotation(float dy) {
+    //    RotationY = _origYrotation + dy;
+    //}
+
+    public void StartScroll() {
+        _origYrotation = RotationY;
+
+    }
+
+    public void DraggingRotation(float dy) {
+        //Debug.Log("dy=" + dy);
+        //var rot = transform.rotation.eulerAngles;
+        //rot.y = _origYrotation + dy;
+        //transform.rotation = Quaternion.Euler(rot);
+        RotationY = _origYrotation + dy;
     }
 }
