@@ -10,6 +10,8 @@ public class InputController : MonoBehaviour {
     private const float SCROLL_ROT_DIS = 180; // in pixels
     private const float FULL_ROT = 360;
 
+    private const float SCROLL_SCALE_DIS = 300; // in pixels
+
     private List<ScrollElement> _scrollElements;
     private float _uiWidth;
     private Vector3 _mouseDownPos;
@@ -49,6 +51,7 @@ public class InputController : MonoBehaviour {
                     if (scrEl != null && scrEl.Interactable) {
                         _mouseScr = scrEl;
                         _mouseScr.StartScroll();
+                        MAIN.uiCont.ShowDragHelper(_mouseDownPos);
                         Debug.Log("Hit ScrollElement! on " + hit.transform.name);
                         break;
                     }
@@ -57,29 +60,49 @@ public class InputController : MonoBehaviour {
                 break;
 
             case MouseState.MouseHold:
-                if (_mouseScr == null)
+                if (_mouseScr == null) // if the user didn't click a scrollable
                     break;
 
                 var mousePos = Input.mousePosition;
-                var mouseDis = mousePos.x - _mouseDownPos.x;
-                //mouseDis *= mousePos.x < _mouseDownPos.x ? -1 : 1;
-                //Debug.Log(mouseDis);
+                if(_dragMode == DragMode.None)
+                    CheckForDragMode(mousePos); //only check if a mode hasn't been determined yet
 
-                var ratio = -1 * (mouseDis / SCROLL_ROT_DIS) * FULL_ROT;
-                _mouseScr.DraggingRotation(ratio);
+                if (_dragMode == DragMode.Horiz)
+                    HandleHorizScroll(mousePos);
+                else if (_dragMode == DragMode.Vert)
+                    HandleVertScroll(mousePos);
 
                 break;
 
             case MouseState.MouseUp:
                 if (_mouseScr != null) {
                     _mouseScr = null;
+                    MAIN.uiCont.HideDragHelper();
                 }
+                _dragMode = DragMode.None;
                 break;
 
             case MouseState.None:
                 break;
         }
     }
+
+    void HandleHorizScroll(Vector3 mousePos) {
+        var mouseDis = mousePos.x - _mouseDownPos.x;
+        //mouseDis *= mousePos.x < _mouseDownPos.x ? -1 : 1;
+        //Debug.Log(mouseDis);
+
+        var ratio = -1 * (mouseDis / SCROLL_ROT_DIS) * FULL_ROT;
+        _mouseScr.DraggingRotation(ratio);
+    }
+
+    void HandleVertScroll(Vector3 mousePos) {
+        var mouseDis = mousePos.y - _mouseDownPos.y;
+
+        var ratio = (mouseDis / SCROLL_SCALE_DIS);
+        _mouseScr.DraggingScale(ratio);
+    }
+
 
 
     private bool _mouseThisFrame = false, _mouseLastFrame;
@@ -93,6 +116,20 @@ public class InputController : MonoBehaviour {
         else if ( _mouseLastFrame  &&  _mouseThisFrame) return MouseState.MouseHold;
         else if ( _mouseLastFrame  && !_mouseThisFrame) return MouseState.MouseUp;
         else return MouseState.None;
+    }
+
+
+
+    private const int DRAG_MODE_DISTANCE = 30; // in pixels
+    private enum DragMode { None, Horiz, Vert };
+    private DragMode _dragMode = DragMode.None;
+
+    void CheckForDragMode(Vector3 mousePos) {
+        if (Vector3.Distance(_mouseDownPos, mousePos) > DRAG_MODE_DISTANCE) {
+            var diff = mousePos - _mouseDownPos;
+            _dragMode = Mathf.Abs(diff.x) > Mathf.Abs(diff.y) ? DragMode.Horiz : DragMode.Vert;
+            MAIN.uiCont.HideDragHelper();
+        }
     }
 
 }

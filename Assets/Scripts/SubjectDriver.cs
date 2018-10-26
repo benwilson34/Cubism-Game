@@ -5,11 +5,13 @@ using UnityEngine;
 public class SubjectDriver : MonoBehaviour {
 
     public ScrollElement[] scrollElements;
+    public Material sketchMaterial;
 
-    private const float ACCURACY_FORGIVENESS = 100f; // in degrees
+    public const int PATIENCE_MIN = 0, PATIENCE_MAX = 100;
+    private const int PATIENCE_START_MIN = 20, PATIENCE_START_MAX = 80;
 
-    public float[] Solutions { get { return _rotationSolutions; } }
-    private float[] _rotationSolutions;
+    public int Patience { get { return _patience; } }
+    private int _patience;
 
 	// Use this for initialization
 	//void Start () {
@@ -21,30 +23,47 @@ public class SubjectDriver : MonoBehaviour {
             elem.Interactable = false;
     }
 
+    public void ReplaceMaterials() {
+        var meshes = GetComponentsInChildren<MeshRenderer>();
+        Debug.Log("Replacing " + meshes.Length + " materials...");
+        foreach (var mesh in meshes) {
+            mesh.materials = new Material[1] { sketchMaterial };
+        }
+    }
+
     public void Generate() {
-        _rotationSolutions = new float[scrollElements.Length];
+        _patience = Random.Range(PATIENCE_START_MIN, PATIENCE_START_MAX + 1);
+
         for(int i = 0; i < scrollElements.Length; i++) {
             var elem = scrollElements[i];
             var elemRot = Random.Range(-90f, 90f);
             elem.RotationY = elemRot;
-            _rotationSolutions[i] = elemRot;
+
+            var elemScale = Random.Range(.2f, 2f);
+            elem.Scale = elemScale;
+            // TODO random model choice
         }
     }
 
     public float CalculateAccuracy(SubjectDriver otherDriver) {
         float sum = 0;
-        var actualScrollElems = otherDriver.scrollElements;
+        var otherScrollElems = otherDriver.scrollElements;
         for (int i = 0; i < scrollElements.Length; i++) {
-            var actual = actualScrollElems[i].transform.rotation;
-            var solution = Quaternion.Euler(0, _rotationSolutions[i], 0);
-            //Debug.Log("actual: " + actual + ", solution: " + solution);
-            var diff = Quaternion.Angle(actual, solution);
-
-            var error = diff / ACCURACY_FORGIVENESS;
-            error = Mathf.Clamp(error, 0, 1);
-            Debug.LogWarning("--- SubError: " + error + " with diff="+ diff);
+            var error = scrollElements[i].CalcError(otherScrollElems[i]);
+            Debug.LogWarning("--- error for "+ scrollElements[i].gameObject.name+": " + error);
             sum += 1f - error;
         }
-        return sum / scrollElements.Length;
+        return sum / scrollElements.Length; // average
+    }
+
+    public void ChangePatience(int amt) {
+        _patience += amt;
+        _patience = Mathf.Clamp(_patience, PATIENCE_MIN, PATIENCE_MAX);
+    }
+
+    public bool MakeChoiceAboutPrint(SubjectDriver otherDriver) {
+        // TODO relationship between accuracy and acceptance
+        // for now it'll just be random
+        return Random.Range(0, 1f) > 0.5f;
     }
 }

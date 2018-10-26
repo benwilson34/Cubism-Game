@@ -1,0 +1,57 @@
+{
+	"greeting": [
+		"hello.",
+		"hi there.",
+		"hey!!!"
+	],
+
+	"question": [
+		"have you tried the hamsteak?",
+		"have you tried the horse bladder pate?",
+		"i saw this place in Delicious Distractions magazine, have you read that?",
+	],
+
+	"confusedComment": [
+		"okay...",
+		"what?",
+		"excuse me?",
+		"huh?"
+	],
+
+	"annoyedComment": [
+		"i've been waiting for 20 minutes...",
+		"i've been waiting for 10 minutes..."
+	],
+
+	"questionCompetency": [
+		"how long have you been working here?",
+		"are you sure you're a right fit for this job?",
+	],
+
+	"demand": [
+		"table for 10.",
+		
+	],
+
+	"annoyedDemand": [
+
+	],
+
+	"threat": [
+
+	],
+
+	"farewell": [
+		"gee. thanks.",
+		"well, thanks anyway",
+		"you tried. i think."
+	],
+
+	"annoyedFarewell": [
+		"hmph!",
+		"i'm leaving an angry yelp review because of you.",
+		"you're the worst.",
+		"i'm never coming here again."
+	]
+
+}

@@ -1,0 +1,91 @@
+{
+	"greeting": [
+		"welcome.",
+		"how can i help you?",
+		"howdy.",
+
+	],
+
+	"affirm": [
+		"i think so",
+		"yep...",
+		"certainly",
+		"probably",
+		"yes!"
+	],
+
+	"negate": [
+		"nope",
+		"i don't think so",
+		"doesn't ring a bell",
+		"nahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+		"probably not",
+		"no!"
+	],
+
+	"stall": [
+		"just a second.",
+		"one moment.",
+		"hold on",
+		"please hold.",
+		"i'll be right with you."
+	],
+
+	"deflect": [
+		"i'm really not sure.",
+		"i think maybe my coworker would know, she's probably in the back somewhere...",
+		"i just started here ten minutes ago.",
+		"i just started here an hour ago.",
+		"i just started here a day ago.",
+		"i just started here a week ago.",
+		"i just started here a month ago.",
+		"i just started here a year ago.",
+	],
+
+	"distract": [
+		"did you know that most breeds of dog can breathe underwater for up to half an hour?",
+		"did you know that married men use the word 'harlequin' 45% less than bachelors?",
+		"did you know that hot water heaters were made of hardwood up until the 1880s?",
+		"did you know that truffles aren't as rare as we think? i have a great recipe at home.",
+		"did you know that it's illegal to rollerblade in Berlin?",
+		"look over there!!!",
+	],
+
+	"excuse": [
+		"it's been a mess today, the chef quit an hour ago...",
+		"it's been a mess today, the CEO quit an hour ago...",
+		"it's been a mess today, the accountant quit an hour ago...",
+		"we're short-staffed. flu season.",
+		"we're short-staffed. must be the weather.",
+		"we're short-staffed. it's tax season.",
+		"we're short-staffed, it's the holidays.",
+		"i fell and hit my head a week ago, still not sure where i am.",
+	],
+
+	"apology": [
+		"sorry about that, I'm trying my hardest.",
+		"sorry, we're really backed up right now.",
+		"my apologies.",
+		"my bad, still waking up.",
+	],
+
+	"suckUp": [
+		"yes sire, right away",
+		"you're right. you're always right.",
+		"you're absolutely right. i suck and you're great. and handsome.",
+
+	],
+
+	"withDrawing": [
+		"here you go, i drew you this.",
+	],
+
+	"farewell": [
+		"have a nice day~",
+		"have a nice evening~",
+		"thank you for your patronage.",
+		"try to enjoy the rest of your day :)",
+		"fare thee well.",
+		"my pleasure.",
+	]
+}

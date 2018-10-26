@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4804676651139354}
   - component: {fileID: 33094294049025926}
   - component: {fileID: 23880147828071002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cheek2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4682048513410712}
   - component: {fileID: 33508206515442122}
   - component: {fileID: 23626507533808418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: earring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 33851894956297364}
   - component: {fileID: 23954679637852400}
   - component: {fileID: 64443677290786140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mouth-closed3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 33026729093756054}
   - component: {fileID: 23002957738523630}
   - component: {fileID: 135948380301588146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 33936100186278466}
   - component: {fileID: 23568807799656224}
   - component: {fileID: 135423303169112894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 33469720444213644}
   - component: {fileID: 23042870092397736}
   - component: {fileID: 65249312303856876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 23758031475590176}
   - component: {fileID: 95661562445148102}
   - component: {fileID: 64972152315423356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cubism-nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4577664859554518}
   - component: {fileID: 114126615507004186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: subject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 4048930510968570}
   - component: {fileID: 33458005416867700}
   - component: {fileID: 23005135487946308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cheek1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4934313404108738}
   - component: {fileID: 33661192425876980}
   - component: {fileID: 23482712956897818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cheek1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 4233522205912112}
   - component: {fileID: 33488748577294212}
   - component: {fileID: 23867167463720122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: eyebrow2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4694442115527842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: earring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 23399259368981402}
   - component: {fileID: 95635166951117894}
   - component: {fileID: 64359777178664008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cubism-ear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 33741506993151176}
   - component: {fileID: 23397052192651946}
   - component: {fileID: 65825691108590336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4418296070427928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cheek2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4350905361389686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4407707643879852}
   - component: {fileID: 114748200614509862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 33754280238507812}
   - component: {fileID: 23388191125476856}
   - component: {fileID: 95242165088606364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: eyelid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4584908345584426}
   - component: {fileID: 114583250805097520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4138654665138236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 33585903272176304}
   - component: {fileID: 23078761797752320}
   - component: {fileID: 136293215345390584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4273105998088742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cheek1-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4460527609943704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: comp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4621131830337662}
   - component: {fileID: 114503097551729630}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1472,6 +1472,7 @@ MonoBehaviour:
   - {fileID: 114503097551729630}
   - {fileID: 114748200614509862}
   - {fileID: 114583250805097520}
+  sketchMaterial: {fileID: 2100000, guid: 92708b6a9094b4b5ea1c08529f33934a, type: 2}
 --- !u!114 &114503097551729630
 MonoBehaviour:
   m_ObjectHideFlags: 1

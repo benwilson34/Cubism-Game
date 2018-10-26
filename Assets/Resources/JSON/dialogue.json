@@ -1,0 +1,10 @@
+{
+	"subjectRules": {
+		"Greeting": [ "Greeting" ],
+		"Question": [  ]
+	},
+
+	"playerRules": {
+		"Greeting": [ "Question", "Demand" ],
+	}
+}
